@@ -29,3 +29,6 @@ To get the complete information of clothes in the clothes relation.
 ### Static Part
 1. Sales Volume
 There are three types of sales volume. 1. Daily 2. Monthly 3. Year. For the daily report, we need to give the specific date in the format of {YYYY-MM-DD}. For the monthly report, we need the format of {YYYY-MM}. For the year, we need the format of {YYYY}. The report will be first classified with store name and then the sales.
+
+## Lambda function on AWS
+I fetch the weather data on CWB and store them in system automatically using AWS Lambda function. The CWB provide a useful [api tool](https://opendata.cwb.gov.tw/dist/opendata-swagger.html) so that we can download the latest weather date via URL. So I use python module request to get the json file via URL provided by api, and then automatically update the newest data through AWS lambda function every ten minutes from 10am to 10pm every day. To do so, I use CloudWatch event as the trigger (the expression: cron(0/10 2-18 * * ? *)).
