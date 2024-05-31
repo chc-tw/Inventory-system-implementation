@@ -1,5 +1,5 @@
 # Inventory-Ｓystem-Implementation
-I implement an inventory system on AWS cloud using PostgreSQL engine.
+I implemented an inventory system on AWS cloud using PostgreSQL engine.
 ## Operations
 There are four main types of actions in this system. First is about the distribution, second is about sales, third is about the clothes and sale look-up, forth is about the static.
 ### Distribution Part
